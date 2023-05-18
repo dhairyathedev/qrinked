@@ -25,7 +25,7 @@ export default function IndexPage() {
       <section className="mt-16 font-primary">
         <h1 className="mx-auto w-auto scale-100 text-center text-2xl font-bold duration-300 md:w-3/5 md:scale-125 md:text-3xl">
           Create your own <span className="text-primary">QR codes</span> and
-          boost your ideas or business
+          boost your ideas and business
         </h1>
         <Link href="/login" className="mt-8 flex items-center justify-center">
           <button className="blueShadow rounded-full bg-primary px-8 py-3 text-lg font-bold text-white transition-all hover:opacity-80 sm:text-xl">
