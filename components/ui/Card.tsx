@@ -32,6 +32,25 @@ export default function Card({slug, type, name, date, qrId}) {
           </div>
         </div>
         <div className="flex flex-row items-center space-x-2">
+          <button onClick={() => router.push(`/app/create/complete?qr_slug=${slug}`)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="hover:text-primary"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            strokeWidth="1"
+            stroke="currentColor"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+            <path d="M7 11l5 5l5 -5"></path>
+            <path d="M12 4l0 12"></path>
+          </svg>
+          </button>
           <button onClick={handleDelete}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,25 +71,6 @@ export default function Card({slug, type, name, date, qrId}) {
             <path d="M10 12l4 4m0 -4l-4 4"></path>
           </svg>
           </button>
-          {/* <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="hover:text-primary"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            strokeWidth="1"
-            stroke="currentColor"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
-            <path d="M7 11l5 5l5 -5"></path>
-            <path d="M12 4l0 12"></path>
-          </svg>
-          </button> */}
         </div>
 
       </div>

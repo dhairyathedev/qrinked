@@ -102,14 +102,6 @@ export default function Complete() {
             </div>
           </div>
         </div>
-        <Link href="/app/dashboard">
-        <Button
-          variant="subtle"
-          className="mt-14 rounded-full bg-bgSecondary px-4 font-semibold text-textPrimary hover:bg-bgSecondary"
-        >
-            Back to Dashboard
-        </Button>
-        </Link>
       </CreateDashboard>
     </div>
   )
