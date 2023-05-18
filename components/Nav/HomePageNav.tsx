@@ -16,12 +16,9 @@ export default function HomePageNav() {
     <>
       <nav className="m-2 mx-auto max-w-screen-lg p-4 font-primary">
         <div className="flex items-center justify-between">
-          <Image
-            src="/assets/logo.svg"
-            alt="QRInked"
-            width={140}
-            height={200}
-          />
+        <Link href="/">
+        <Image src="/assets/logo.svg" alt="QRInked" width={140} height={200} />
+        </Link>
           <Link href="/login" className="hidden sm:block">
           <button className="rounded-full bg-primary px-8 py-2 font-bold text-white transition-all hover:opacity-80">
             Sign up

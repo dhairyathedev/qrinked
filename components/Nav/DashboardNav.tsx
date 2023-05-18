@@ -5,7 +5,9 @@ export default function DashboardNav() {
   return (
     <nav className="m-2 mx-auto max-w-screen-md p-4">
       <div className="flex items-center justify-between">
+        <Link href="/">
         <Image src="/assets/logo.svg" alt="QRInked" width={144} height={144} />
+        </Link>
         <Link href="/app/create">
           <button className="flex flex-row items-center space-x-2 rounded-full bg-primary p-2 font-semibold text-white transition-all hover:opacity-80 md:px-8">
             <svg
