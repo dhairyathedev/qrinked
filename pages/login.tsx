@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 export default function Login() {
   const [email, setEmail] = useState("")
   const [emailSent, setEmailSent] = useState(false)
+  const [loading, setLoading] = useState(false)
   const router = useRouter()
   useEffect(() => {
     async function loadUser() {
@@ -25,6 +26,7 @@ export default function Login() {
   async function handleLogin() {
     setEmail("")
     if (email.length > 0) {
+      setLoading(true)
       const data = await supabase.auth
         .signInWithOtp({
           email: email,
@@ -38,6 +40,7 @@ export default function Login() {
         })
         .then(({ data, error }) => {
           if (!error) {
+            setLoading(false)
             setEmailSent(true)
           }
         })
@@ -65,7 +68,7 @@ export default function Login() {
             </p>
           </div>
           <Alert
-            className={`${emailSent ? "block" : "hidden"} my-6 font-primary`}
+            className={`${emailSent ? "block" : "hidden"} my-6 font-primary animate-pulse`}
           >
             <Terminal className="h-4 w-4" />
             <AlertTitle>Magic Link Sent!</AlertTitle>
@@ -93,10 +96,33 @@ export default function Login() {
               />
             </label>
             <Button
-              className="mt-4 h-10 w-full bg-primary text-xl font-semibold hover:bg-primary hover:opacity-90"
+              className={`mt-4 h-10 w-full bg-primary text-xl font-semibold hover:bg-primary hover:opacity-90 flex items-center space-x-2`}
               onClick={handleLogin}
+              disabled={loading}
             >
-              Login
+              <span>Login</span>{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`${loading ? "block animate-spin" : "hidden"}`}
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 6l0 -3"></path>
+                <path d="M16.25 7.75l2.15 -2.15"></path>
+                <path d="M18 12l3 0"></path>
+                <path d="M16.25 16.25l2.15 2.15"></path>
+                <path d="M12 18l0 3"></path>
+                <path d="M7.75 16.25l-2.15 2.15"></path>
+                <path d="M6 12l-3 0"></path>
+                <path d="M7.75 7.75l-2.15 -2.15"></path>
+              </svg>
             </Button>
           </div>
           <div className="mt-36 text-center text-xs uppercase text-textSecondary">

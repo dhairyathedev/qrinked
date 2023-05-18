@@ -14,10 +14,10 @@ export default function IndexPage() {
   return (
     <HomePageLayout>
       <Head>
-        <title>Next.js</title>
+        <title>QRInked - Create Beautiful QR Codes</title>
         <meta
           name="description"
-          content="Next.js template for building apps with Radix UI and Tailwind CSS"
+          content="Create your own QR codes and boost your ideas or business"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -109,11 +109,11 @@ export default function IndexPage() {
         <Image src="/assets/logo.svg" alt="QRInked" width={140} height={200} />
         <h3 className="mt-2 w-3/5 text-xs font-semibold sm:text-sm">Create your own QR codes and boost your ideas or business</h3>
         </div>
-        <Link href="/contact" className="mt-8 flex items-center justify-center">
+        {/* <Link href="/contact" className="mt-8 flex items-center justify-center">
           <button className="hidden rounded-full bg-primary px-8 py-3 text-lg font-bold text-white transition-all hover:opacity-80 sm:text-xl md:block">
               Contact us
           </button>
-        </Link>
+        </Link> */}
       </section>
     </HomePageLayout>
   )

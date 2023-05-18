@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import { authStatus } from "@/lib/auth"
 import CreateNav from "../Nav/CreateNav"
 import { Button } from "../ui/button"
+import Head from "next/head"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -23,6 +24,15 @@ export default function CreateDashboard({ children }: LayoutProps) {
   }, [router])
   return (
     <div className="font-primary">
+      <Head>
+        <title>QRInked - Create Beautiful QR Codes</title>
+        <meta
+          name="description"
+          content="Create your own QR codes and boost your ideas or business"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <CreateNav />
       <main className="m-2 mx-auto max-w-screen-md p-4">
         {children}
