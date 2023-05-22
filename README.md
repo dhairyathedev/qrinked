@@ -17,4 +17,4 @@ Currently, QR codes can be downloaded in two formats **JPG and PNG**.
 
 It is fun to create QR codes here, why not give it a try?
 ### Demo Video
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hJTBLW39FKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![QRInked Demo](https://img.youtube.com/vi/hJTBLW39FKQ/0.jpg)](https://www.youtube.com/watch?v=hJTBLW39FKQ)
