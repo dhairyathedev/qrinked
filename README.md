@@ -1,78 +1,20 @@
-# next-template
+# QRInked - Create and Manage QR Codes
+**QRInked** is a simple and easy-to-use tool that helps you create and manage QR codes. With QRInked, you can create QR codes for any links, images and many more.
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+QRInked allows you to create following types of QRs for you and your business:
+- Website
+- WIFI
+- Call
+- SMS
+- YouTube
+- Instagram
+- Whatsapp
+- and many more coming...
 
-## Features
+Created QR codes can be saved online and can be accessed from any device. All QRs are synced on the cloud.
 
-- Radix UI Primitives
-- Tailwind CSS
-- Fonts with `@next/font`
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Automatic import sorting with `@ianvs/prettier-plugin-sort-imports`
+Currently, QR codes can be downloaded in two formats **JPG and PNG**. 
 
-## Tailwind CSS Features
-
-- Class merging with `taiwind-merge`
-- Animation with `tailwindcss-animate`
-- Conditional classes with `clsx`
-- Variants with `class-variance-authority`
-- Automatic class sorting with `eslint-plugin-tailwindcss`
-
-## Import Sort
-
-The starter comes with `@ianvs/prettier-plugin-sort-imports` for automatically sort your imports.
-
-### Input
-
-```tsx
-import * as React from "react"
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import "@/styles/globals.css"
-import { twMerge } from "tailwind-merge"
-
-import { NavItem } from "@/types/nav"
-import { cn } from "@/lib/utils"
-```
-
-### Output
-
-```tsx
-import * as React from "react"
-// React is always first.
-import Link from "next/link"
-// Followed by next modules.
-import { twMerge } from "tailwind-merge"
-
-// Followed by third-party modules
-// Space
-import "@/styles/globals.css"
-// styles
-import { NavItem } from "@/types/nav"
-// types
-import { siteConfig } from "@/config/site"
-// config
-import { cn } from "@/lib/utils"
-// lib
-import { buttonVariants } from "@/components/ui/button"
-
-// components
-```
-
-### Class Merging
-
-The `cn` util handles conditional classes and class merging.
-
-### Input
-
-```ts
-cn("px-2 bg-slate-100 py-2 bg-slate-200")
-// Outputs `p-2 bg-slate-200`
-```
-
-## License
-
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+It is fun to create QR codes here, why not give it a try?
+### Demo Video
+[![QRInked Demo](https://img.youtube.com/vi/hJTBLW39FKQ/0.jpg)](https://www.youtube.com/watch?v=hJTBLW39FKQ)
